@@ -12,6 +12,23 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Hamburger Menu Logic
+    const hamburger = document.getElementById('hamburger-btn');
+    const navWrapper = document.getElementById('nav-wrapper');
+    const navLinks = document.querySelectorAll('#nav-menu a');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navWrapper.classList.toggle('active');
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navWrapper.classList.remove('active');
+        });
+    });
+
     // Reveal animation targets
     const targets = document.querySelectorAll('section, .grid-item, .product-card');
     targets.forEach(t => {
