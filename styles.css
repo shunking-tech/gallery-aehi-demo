@@ -414,6 +414,10 @@ footer {
 }
 
 @media (max-width: 767px) {
+    #main-header {
+        height: 70px;
+    }
+
     #main-header .container {
         flex-direction: row;
         height: 100%;
@@ -451,6 +455,10 @@ footer {
 
     nav a {
         font-size: 1.2rem;
+    }
+
+    #hero {
+        padding-top: 70px;
     }
 
     #hero h2 {
