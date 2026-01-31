@@ -6,7 +6,8 @@
     --dark-section: #1A1A1A;
     --white: #FFFFFF;
     --soft-border: rgba(0,0,0,0.08);
-    --transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    --ease: cubic-bezier(0.25, 1, 0.5, 1);
+    --transition: all 0.5s var(--ease);
 }
 
 * {
@@ -100,7 +101,7 @@ nav a:hover {
     object-fit: cover;
     opacity: 0;
     transform: scale(1.1);
-    animation: revealImg 1.5s var(--transition) forwards;
+    animation: revealImg 1.5s var(--ease) forwards;
 }
 
 @keyframes revealImg {
@@ -151,7 +152,7 @@ nav a:hover {
 section, .grid-item, .product-card {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: all 1s var(--ease);
 }
 
 section {
